@@ -949,7 +949,7 @@ midori_location_action_create_tool_item (GtkAction* action)
     gtk_widget_show (alignment);
     gtk_container_add (GTK_CONTAINER (toolitem), alignment);
 
-    entry = midori_location_entry_new ();
+    entry = GTK_WIDGET (midori_location_entry_new ());
     #if GTK_CHECK_VERSION (3, 6, 0)
     gtk_entry_set_input_purpose (GTK_ENTRY (entry), GTK_INPUT_PURPOSE_URL);
     #endif
